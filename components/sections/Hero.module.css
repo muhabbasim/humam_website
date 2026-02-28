@@ -1,0 +1,68 @@
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  color: var(--color-light-cream);
+  overflow: hidden;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark-olive);
+  /* TODO: Add actual video or image here with parallax mask later */
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(62, 80, 58, 0.4), var(--color-dark-olive));
+  z-index: -1;
+}
+
+.content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.title {
+  color: var(--color-light-cream);
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+  margin-bottom: 2rem;
+  color: var(--color-muted-green);
+}
+
+.description {
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+  }
+}

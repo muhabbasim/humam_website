@@ -1,0 +1,108 @@
+{
+  "HomePage": {
+    "title": "Elevate Food Quality",
+    "subtitle": "Ensure Sustainable Success.",
+    "description": "Expert consultancy, structural planning, and quality assurance for the modern catering and food industry.",
+    "ctaPrimary": "Discuss Your Project",
+    "ctaSecondary": "Explore Our Services"
+  },
+  "Navbar": {
+    "about": "About Us",
+    "services": "Services",
+    "industries": "Industries",
+    "training": "Training",
+    "contact": "Contact",
+    "login": "Client Portal"
+  },
+  "About": {
+    "eyebrow": "Our Story",
+    "title": "A beacon in the sea of food.",
+    "description": "Humam specializes in guiding businesses in the food sector, from production to manufacturing, training, quality services, and logistical support planning.",
+    "cta": "Learn More About Humam",
+    "pillars": {
+      "dev": "Business Development",
+      "safety": "Food Safety & Quality",
+      "training": "Training & Human Capital"
+    }
+  },
+  "Services": {
+    "eyebrow": "Our Expertise",
+    "title": "Comprehensive Solutions for the Food Industry",
+    "dev": {
+      "title": "Consultancy & Business Development",
+      "desc": "Strategic planning, menu design, and operational excellence for food projects."
+    },
+    "safety": {
+      "title": "Quality & Food Safety",
+      "desc": "ISO & HACCP certification preparation and rigorous safety audits."
+    },
+    "training": {
+      "title": "Training & Development",
+      "desc": "Empowering chefs and employees with specialized culinary and safety programs."
+    }
+  },
+  "Industries": {
+    "eyebrow": "Our Reach",
+    "title": "Industries We Serve",
+    "list": {
+      "rest": "Restaurants & Catering",
+      "bakery": "Bakeries & Pastry",
+      "factory": "Food Factories",
+      "hotel": "Hotels & Cafes",
+      "hajj": "Hajj Companies",
+      "healthy": "Healthy Meal Companies"
+    }
+  },
+  "Challenges": {
+    "eyebrow": "Challenges We Overcome",
+    "title": "Why Choose Humam",
+    "description": "We help you navigate the complexities of the food industry, turning obstacles into sustainable growth.",
+    "list": {
+      "quality": {
+        "title": "Balance Quality & Cost",
+        "desc": "Deliver high quality at reasonable prices without compromising standards."
+      },
+      "efficiency": {
+        "title": "Improve Operational Efficiency",
+        "desc": "Streamline internal processes to reduce costs and boost productivity."
+      },
+      "growth": {
+        "title": "Launch New Projects",
+        "desc": "Navigate growth and expansion from initial idea to seamless execution."
+      },
+      "sustainability": {
+        "title": "Achieve Sustainability",
+        "desc": "Balance profitability with social and environmental responsibility."
+      },
+      "reputation": {
+        "title": "Build Strong Reputation",
+        "desc": "Establish a trustworthy brand that attracts clients and partners."
+      }
+    }
+  },
+  "Experts": {
+    "eyebrow": "Our Leadership",
+    "title": "Meet the Experts",
+    "list": {
+      "atef": {
+        "name": "Atef Al-Arishi",
+        "role": "General Manager",
+        "bio": "27 years managing catering for Hajj & Umrah, with expertise in supply chain and pre-prepared meals."
+      },
+      "enas": {
+        "name": "Enas Khodary",
+        "role": "Consultant Chef",
+        "bio": "16 years culinary experience, certified by Culinary Arts Authority as an expert in Saudi cuisine."
+      },
+      "alaa": {
+        "name": "Alaa Zahdi",
+        "role": "Food Manufacturing Engineer",
+        "bio": "Specializes in food manufacturing, quality assurance, and adopting technological innovations."
+      }
+    }
+  },
+  "FinalCTA": {
+    "title": "Ready to Elevate Your Food Business?",
+    "cta": "Start Your Journey"
+  }
+}

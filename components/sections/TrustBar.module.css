@@ -1,0 +1,56 @@
+.trustBar {
+  background-color: var(--color-soft-beige);
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrollContainer {
+  display: flex;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  animation: scroll 40s linear infinite;
+}
+
+.client {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-dark-olive);
+  opacity: 0.7;
+}
+
+.separator {
+  color: var(--color-muted-green);
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+[dir="rtl"] .marquee {
+  animation: scrollRtl 40s linear infinite;
+}
+
+@keyframes scrollRtl {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(50%);
+  }
+}
