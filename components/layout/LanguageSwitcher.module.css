@@ -1,32 +1,36 @@
-.wrapper {
-  display: flex;
+.button {
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--color-soft-beige);
-  padding: 0.25rem 0.5rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-}
-
-.label {
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-.select {
   background: transparent;
-  border: none;
-  color: var(--color-dark-olive);
+  color: var(--color-brand-dark);
   font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
+  border: 1px solid rgba(131, 157, 120, 0.4);
+  /* Brand Green subtle border */
+  padding: 0.4rem 0.8rem;
+  border-radius: 99px;
+  transition: all 0.2s ease;
   outline: none;
-  appearance: none;
-  padding-right: 0.5rem;
 }
 
-.select:disabled {
+.button:hover:not(:disabled) {
+  background-color: var(--color-brand-green);
+  color: var(--color-brand-cream);
+  border-color: var(--color-brand-green);
+}
+
+.button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.icon {
+  font-size: 1rem;
+}
+
+.text {
+  padding-top: 1px;
 }

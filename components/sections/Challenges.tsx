@@ -5,7 +5,7 @@ import {useTranslations} from 'next-intl';
 import styles from './Challenges.module.css';
 import {motion, useScroll, useTransform} from 'framer-motion';
 
-function ChallengeCard({title, desc, index}: {title: string; desc: string; index: number}) {
+function ChallengeCard({title, desc}: {title: string; desc: string}) {
   const ref = useRef<HTMLDivElement>(null);
   
   // Track this specific card's position relative to the viewport
@@ -46,10 +46,9 @@ export default function Challenges() {
 
         {/* Scrolling Right Column */}
         <div className={styles.scrollCol}>
-          {challengesList.map((key, index) => (
+          {challengesList.map((key) => (
             <ChallengeCard
               key={key}
-              index={index}
               title={t(`list.${key}.title`)}
               desc={t(`list.${key}.desc`)}
             />

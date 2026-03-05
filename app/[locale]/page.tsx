@@ -7,6 +7,7 @@ import Industries from '@/components/sections/Industries';
 import Challenges from '@/components/sections/Challenges';
 import Experts from '@/components/sections/Experts';
 import FinalCTA from '@/components/sections/FinalCTA';
+import PatternDivider from '@/components/brand/PatternDivider';
 
 export default async function HomePage({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
@@ -20,6 +21,7 @@ export default async function HomePage({params}: {params: Promise<{locale: strin
       <ServicesBento />
       <Industries />
       <Challenges />
+      <PatternDivider variant="zigzag" flip />
       <Experts />
       <FinalCTA />
     </main>

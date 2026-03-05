@@ -2,7 +2,7 @@
 
 import {useLocale} from 'next-intl';
 import {useRouter, usePathname} from '@/i18n/routing';
-import {ChangeEvent, useTransition} from 'react';
+import {useTransition} from 'react';
 import styles from './LanguageSwitcher.module.css';
 
 export default function LanguageSwitcher() {
@@ -11,28 +11,22 @@ export default function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
 
-  function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
-    const nextLocale = event.target.value;
+  function toggleLocale() {
+    const nextLocale = locale === 'en' ? 'ar' : 'en';
     startTransition(() => {
       router.replace(pathname, {locale: nextLocale});
     });
   }
 
   return (
-    <div className={styles.wrapper}>
-      <label className={styles.label} htmlFor="language-select">
-        🌍
-      </label>
-      <select
-        id="language-select"
-        className={styles.select}
-        defaultValue={locale}
-        disabled={isPending}
-        onChange={onSelectChange}
-      >
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-      </select>
-    </div>
+    <button 
+      className={styles.button} 
+      onClick={toggleLocale} 
+      disabled={isPending}
+      aria-label="Toggle language"
+    >
+      <span className={styles.icon}>{locale === 'en' ? '🇸🇦' : '🇺🇸'}</span>
+      <span className={styles.text}>{locale === 'en' ? 'العربية' : 'English'}</span>
+    </button>
   );
 }

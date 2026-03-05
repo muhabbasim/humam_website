@@ -1,16 +1,37 @@
 :root {
-  --color-dark-olive: #3e503a;
-  --color-muted-green: #94a378;
-  --color-light-cream: #f7f7ef;
-  --color-soft-beige: #eeece0;
+  /* Extracted Brand Colors */
+  --color-brand-red: #6e1c24;
+  /* Deep Burgundy from zigzag/half-circle */
+  --color-brand-green: #839d78;
+  --color-brand-dark-olive: #3e503a;
+  /* Sage green from star/clover */
+  --color-brand-mustard: #e6b85c;
+  /* Warm yellow/mustard from clover border */
+  --color-brand-cream: #f6f5ef;
+  /* Base light cream */
+  --color-brand-beige: #eae8dc;
+  /* Slightly darker beige */
+  --color-brand-dark: #2a2a2a;
+  /* For deep text contrast */
 
-  --border-color: rgba(148, 163, 120, 0.2);
-  /* 20% Muted Green */
+  /* Map old generic names to new brand names for backward compatibility initially, then we'll migrate to explicit use */
+  --color-dark-olive: var(--color-brand-dark-olive);
+  --color-muted-green: var(--color-brand-green);
+  --color-light-cream: var(--color-brand-cream);
+  --color-soft-beige: var(--color-brand-beige);
+
+  --border-color: rgba(131, 157, 120, 0.3);
+  /* Based on brand green */
   --border-radius: 24px;
   --border-radius-sm: 12px;
 
   --font-display: var(--font-outfit), sans-serif;
   --font-body: var(--font-inter), sans-serif;
+}
+
+html[dir="rtl"] {
+  --font-display: var(--font-tajawal), sans-serif;
+  --font-body: var(--font-tajawal), sans-serif;
 }
 
 /* Reset and Basics */
@@ -112,3 +133,4 @@ p {
   display: block;
   margin-bottom: 1.2rem;
 }
+

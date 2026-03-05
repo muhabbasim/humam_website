@@ -4,6 +4,8 @@ import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/routing';
 import styles from './ServicesBento.module.css';
 import {motion} from 'framer-motion';
+import {BrandHalfCircle} from '@/components/brand/BrandHalfCircle';
+import {BrandStar} from '@/components/brand/BrandStar';
 
 export default function ServicesBento() {
   const t = useTranslations('Services');
@@ -54,6 +56,9 @@ export default function ServicesBento() {
           {/* Large Main Feature Card */}
           <Link href="/services/consultancy" className={styles.largeCardLink}>
             <motion.div variants={cardVariants} className={`card ${styles.bentoCard} ${styles.largeCard}`}>
+              <div className={styles.bentoWatermarkLarge}>
+                <BrandHalfCircle />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.icon}>📈</div>
                 <h3>{t('dev.title')}</h3>
@@ -66,6 +71,9 @@ export default function ServicesBento() {
           {/* Right Stacked Cards */}
           <Link href="/services/quality" className={styles.stackedCardLink}>
             <motion.div variants={cardVariants} className={`card ${styles.bentoCard}`}>
+              <div className={styles.bentoWatermarkSmall}>
+                <BrandStar fill="var(--color-brand-mustard)" />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.icon}>🛡️</div>
                 <h3>{t('safety.title')}</h3>
@@ -77,6 +85,9 @@ export default function ServicesBento() {
 
           <Link href="/services/training" className={styles.stackedCardLink}>
             <motion.div variants={cardVariants} className={`card ${styles.bentoCard}`}>
+              <div className={styles.bentoWatermarkSmall} style={{ top: '-10%', left: '-10%', right: 'auto', bottom: 'auto' }}>
+                <BrandStar fill="var(--color-brand-red)" />
+              </div>
               <div className={styles.cardContent}>
                 <div className={styles.icon}>👥</div>
                 <h3>{t('training.title')}</h3>

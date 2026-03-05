@@ -15,20 +15,19 @@ const CLIENTS = [
 export default function TrustBar() {
   return (
     <section className={styles.trustBar}>
+      <h3 className={styles.introText}>Trusted by industry leaders including</h3>
       <div className={styles.scrollContainer}>
         <div className={styles.marquee}>
           {CLIENTS.map((client, idx) => (
-            <React.Fragment key={idx}>
+            <div key={idx} className={styles.clientItem}>
               <span className={styles.client}>{client}</span>
-              <span className={styles.separator}>✦</span>
-            </React.Fragment>
+            </div>
           ))}
           {/* Duplicate for seamless scrolling loop */}
           {CLIENTS.map((client, idx) => (
-            <React.Fragment key={`copy-${idx}`}>
+            <div key={`copy-${idx}`} className={styles.clientItem}>
               <span className={styles.client}>{client}</span>
-              <span className={styles.separator}>✦</span>
-            </React.Fragment>
+            </div>
           ))}
         </div>
       </div>

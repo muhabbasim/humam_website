@@ -1,6 +1,8 @@
 .wrapper {
   background-color: var(--color-dark-olive);
   color: var(--color-light-cream);
+  border-radius: var(--border-radius);
+  margin: 0rem 2rem;
   padding: 120px 0;
 }
 
@@ -44,6 +46,10 @@
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .wrapper {
+    border-radius: 0px;
+    margin: 0rem;
   }
 }
 

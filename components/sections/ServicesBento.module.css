@@ -1,8 +1,6 @@
 .wrapper {
-  background-color: var(--color-light-cream);
   position: relative;
 }
-
 .header {
   margin-bottom: 5rem;
   text-align: center;
@@ -33,18 +31,77 @@
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  background-color: var(--color-soft-beige);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  min-height: 280px;
+  background-color: var(--color-brand-beige);
+  cursor: pointer;
+  z-index: 1;
   height: 100%;
   padding: 48px;
   border-radius: var(--border-radius);
 }
 
+.bentoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/patterns/pattern-02.png');
+  background-size: 300px;
+  background-repeat: repeat;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.bentoCard:hover::before {
+  opacity: 0.04;
+}
+
+/* Watermarks inside Cards */
+.bentoWatermarkLarge {
+  position: absolute;
+  bottom: -15%;
+  right: -10%;
+  width: 60%;
+  height: auto;
+  opacity: 0.15;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bentoWatermarkSmall {
+  position: absolute;
+  bottom: -20%;
+  right: -20%;
+  width: 70%;
+  height: auto;
+  opacity: 0.1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bentoCard:hover .bentoWatermarkLarge,
+.bentoCard:hover .bentoWatermarkSmall {
+  opacity: 0.25;
+  transform: scale(1.05);
+}
+
 .icon {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
 }
 
 .cardContent h3 {
@@ -73,14 +130,15 @@
 
 .cardHoverAccent {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: var(--color-muted-green);
+  background-color: var(--color-brand-mustard);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 3;
 }
 
 [dir="rtl"] .cardHoverAccent {
@@ -89,6 +147,15 @@
 
 .bentoCard:hover .cardHoverAccent {
   transform: scaleX(1);
+}
+
+@media (min-width: 992) {
+  .wrapper {
+    background-color: rgba(255, 255, 255, 0.427);
+    border-radius: var(--border-radius);
+    margin: 2rem;
+    position: relative;
+  }
 }
 
 @media (max-width: 768px) {

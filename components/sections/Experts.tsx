@@ -1,6 +1,8 @@
 import {useTranslations} from 'next-intl';
 import styles from './Experts.module.css';
 
+import {Link} from '@/i18n/routing';
+
 export default function Experts() {
   const t = useTranslations('Experts');
   const expertsList = ['atef', 'enas', 'alaa'];
@@ -15,7 +17,7 @@ export default function Experts() {
         
         <div className={styles.grid}>
           {expertsList.map((key) => (
-            <div key={key} className={`card ${styles.expertCard}`}>
+            <Link href={`/team/${key}`} key={key} className={`card ${styles.expertCard}`} aria-label={`View ${t(`list.${key}.name`)} profile`}>
               <div className={styles.imagePlaceholder}>
                 {/* Real images will go here, placeholders for now */}
               </div>
@@ -26,7 +28,7 @@ export default function Experts() {
                   <p>{t(`list.${key}.bio`)}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

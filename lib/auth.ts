@@ -11,7 +11,7 @@ export interface User {
 export const MOCK_USER: User = {
   id: '1',
   name: 'Ahmed Client',
-  role: 'CLIENT' // Change to ADMIN or EDITOR to test other views
+  role: 'ADMIN' // Change to ADMIN or EDITOR to test other views
 };
 
 export function getUserRole(): Role {

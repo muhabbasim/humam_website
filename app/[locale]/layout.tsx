@@ -2,7 +2,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, setRequestLocale} from 'next-intl/server';
 import {routing} from '@/i18n/routing';
 import {notFound} from 'next/navigation';
-import {Outfit, Inter} from 'next/font/google';
+import {Outfit, Inter, Tajawal} from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import '../globals.css';
@@ -16,6 +16,13 @@ const inter = Inter({
 const outfit = Outfit({
   subsets: ['latin'],
   variable: '--font-outfit',
+  display: 'swap',
+});
+
+const tajawal = Tajawal({
+  subsets: ['arabic', 'latin'],
+  weight: ['300', '400', '500', '700', '800', '900'],
+  variable: '--font-tajawal',
   display: 'swap',
 });
 
@@ -46,7 +53,7 @@ export default async function LocaleLayout({
   const isRtl = locale === 'ar';
 
   return (
-    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} className={`${inter.variable} ${outfit.variable}`}>
+    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} className={`${inter.variable} ${outfit.variable} ${tajawal.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <Navbar />

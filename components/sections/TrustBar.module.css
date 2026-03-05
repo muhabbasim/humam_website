@@ -1,37 +1,62 @@
 .trustBar {
-  background-color: var(--color-soft-beige);
-  padding: 2rem 0;
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--color-brand-cream);
+  padding-top: 4rem;
+  padding-bottom: 5.5rem;
   overflow: hidden;
-  white-space: nowrap;
+}
+
+.introText {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--color-brand-green);
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
 }
 
 .scrollContainer {
   display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
+/* ZeroDrift Marquee 1:1 Match */
 .marquee {
   display: flex;
+  grid-column-gap: 1.25rem;
+  width: max-content;
+  animation: scrollMarquee 30s linear infinite;
+}
+
+.clientItem {
+  display: flex;
   align-items: center;
-  gap: 3rem;
-  animation: scroll 40s linear infinite;
+  justify-content: center;
+  width: 15rem;
+  height: 6rem;
+  padding: 1.5rem 3rem;
+  border-radius: 0.5rem;
+  background-color: rgba(234, 232, 220, 0.5);
+  /* Semi-transparent brand beige */
+  transition: background-color 0.3s ease;
+}
+
+.clientItem:hover {
+  background-color: rgba(234, 232, 220, 0.9);
 }
 
 .client {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--color-dark-olive);
+  font-size: 1.1rem;
+  color: var(--color-brand-dark);
   opacity: 0.7;
+  text-align: center;
+  width: 100%;
 }
 
-.separator {
-  color: var(--color-muted-green);
-  opacity: 0.5;
-  font-size: 0.875rem;
-}
-
-@keyframes scroll {
+@keyframes scrollMarquee {
   0% {
     transform: translateX(0);
   }
@@ -39,13 +64,15 @@
   100% {
     transform: translateX(-50%);
   }
+
+  /* Scrolls precisely half its duplicated length */
 }
 
 [dir="rtl"] .marquee {
-  animation: scrollRtl 40s linear infinite;
+  animation: scrollMarqueeRtl 30s linear infinite;
 }
 
-@keyframes scrollRtl {
+@keyframes scrollMarqueeRtl {
   0% {
     transform: translateX(0);
   }
