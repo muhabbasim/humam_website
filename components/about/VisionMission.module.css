@@ -96,12 +96,12 @@
   max-width: 50ch;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .wrapper {
     background-color: rgba(255, 255, 255, 0.649);
     border-radius: var(--border-radius);
   }
-}
+} */
 
 @media (max-width: 768px) {
   .wrapper {

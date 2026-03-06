@@ -81,7 +81,7 @@ export default function Leadership() {
                 <div className={styles.info}>
                   <h3 className={styles.name}>{t(`leadership.list.${key}.name`)}</h3>
                   <p className={styles.role}>{t(`leadership.list.${key}.role`)}</p>
-                  <p className={styles.bio}>{t(`leadership.list.${key}.bio`)}</p>
+                  {/* <p className={styles.bio}>{t(`leadership.list.${key}.bio`)}</p> */}
                 </div>
               </motion.div>
             </Link>

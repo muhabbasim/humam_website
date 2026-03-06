@@ -11,7 +11,7 @@ export default function VisionMission() {
 
   return (
     <section className={`section ${styles.wrapper}`}>
-      <div className="containerx">
+      <div className="container">
         <div className={styles.grid}>
           <motion.div
             className={`card ${styles.block}`}
